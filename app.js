@@ -4,7 +4,7 @@ var numWorkers = require('os').cpus().length
 if (cluster.isMaster) {
 	          var app = require('express')()
 	        	app.all('/*', (req, res) => {
-						res.send('Olá Linx + Chaordic + Neemu!, tudo bem?').end()
+						res.send('Olá Linx + Chaordic + Neemu!, tudo bem? - Adriel Lucas').end()
 					});
 
 	        var pidToPort = {};
