@@ -27,9 +27,8 @@ module.exports = {
     production : {
       user : "root",
       host : "192.168.10.10.",
-      ref  : "origin/master",
-      keys : "/home/adriellucas/Documents/chaordic/chaordicmanager/vms/app/.vagrant/machines/chaordicapp/virtualbox/private_key",
-      repo : "https://gitlab.com/chaordic/chaordicapp.git",
+      ref  : "github/master",
+      repo : "https://github.com/adriell/chaordicapp.git",
       path : "/var/www/html/production",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
     },
