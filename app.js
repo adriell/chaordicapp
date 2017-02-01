@@ -10,7 +10,7 @@ if (cluster.isMaster) {
 	        var pidToPort = {};
 	        var worker, port;
 	        for (var i = 0; i < numWorkers; i++) {
-							port = 3000 + i;
+							port = 3001 + i;
 							console.log("Porta " + port);
 							worker = cluster.fork({port: port});
 							pidToPort[worker.process.pid] = port;
