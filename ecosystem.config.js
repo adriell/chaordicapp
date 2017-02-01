@@ -26,7 +26,7 @@ module.exports = {
   deploy : {
     production : {
       user : "root",
-      host : "192.168.10.10",
+      host : "localhost",
       ref  : "github/master",
       repo : "https://github.com/adriell/chaordicapp.git",
       path : "/var/www/html/production",
