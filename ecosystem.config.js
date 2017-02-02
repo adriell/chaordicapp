@@ -30,7 +30,7 @@ module.exports = {
       ref  : "origin/master",
       repo : "https://github.com/adriell/chaordicapp.git",
       path : "/var/www/html/production",
-      "post-deploy" : "pm2 startOrRestart ecosystem.config.js --env production"
+      "post-deploy" : "pm2 restart ecosystem.config.js --env production"
     },
     dev : {
       user : "root",
@@ -38,7 +38,7 @@ module.exports = {
       ref  : "origin/master",
       repo : "https://gitlab.com/chaordic/chaordicapp.git",
       path : "/var/www/html/development",
-      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
+      "post-deploy" : "npm install && pm2 restart ecosystem.json --env dev",
       env  : {
         NODE_ENV: "dev"
       }
