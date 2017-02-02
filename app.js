@@ -3,6 +3,8 @@ var numWorkers = require('os').cpus().length
 
 if (cluster.isMaster) {
 	          var app = require('express')()
+			https = require('https');
+ 
 	        	app.all('/*', (req, res) => {
 						res.send('Olá Linx + Chaordic + Neemu! Está tudo bem? - Adriel Lucas').end()
 					});
@@ -23,7 +25,7 @@ if (cluster.isMaster) {
 				        console.log('Worker ' + worker.process.pid + ' is online')
 				  })
 
-          cluster.on('exit', (worker, code, signal) => {
+              cluster.on('exit', (worker, code, signal) => {
               console.log('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal)
               console.log('Starting a new worker')
 				      cluster.fork()
