@@ -27,7 +27,7 @@ module.exports = {
     production : {
       user : "root",
       host : "localhost",
-      ref  : "github/master",
+      ref  : "origin/master",
       repo : "https://github.com/adriell/chaordicapp.git",
       path : "/var/www/html/production",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
